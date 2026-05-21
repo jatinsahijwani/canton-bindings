@@ -56,7 +56,7 @@ This is deliberately a "complete the runtime layer" proposal — not a platform 
 
 ```mermaid
 flowchart TB
-    DAR[".dar files\n(Daml packages)"] --> Codegen[canton-bindings-cli\n(Rust)]
+    DAR[".dar files\n(Daml packages)"] --> Codegen["canton-bindings-cli\n(Rust)"]
     Codegen --> TS["TypeScript bindings"]
     Codegen --> PY["Python bindings"]
     Codegen --> JV["Java / Kotlin bindings"]
