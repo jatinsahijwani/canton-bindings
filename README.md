@@ -245,7 +245,55 @@ All milestones are paid in Canton Coin upon committee acceptance per CIP-0100. P
 
 ## 7. Team and capability
 
-(To be filled in with team bios — 2-4 engineers comfortable with TypeScript and Rust, with at least one with prior Daml/Canton or distributed-systems experience.)
+**Core team: 2 engineers — Jatin Sahijwani and Anirudh Singh (HackTour India).**
+
+We are EVM-native infrastructure builders. We have not previously shipped on Daml/Canton — and we believe that's a feature of this proposal, not a bug. The Foundation's own Q1 2026 survey found that **71% of Canton developers come from an EVM background** and **80% joined in the last 12 months**. Canton Bindings is, at its core, an SDK that has to feel right to that exact demographic. We *are* that demographic. We will hit every onboarding friction point in real time as we build, and the ergonomic decisions in the bindings will be calibrated against fresh, honest user experience rather than against years of accumulated Daml intuition.
+
+### 7.1 Most relevant prior work
+
+**Arbitrum Foundation grant — Production-grade ZK SDK for Arbitrum.** A TypeScript SDK that takes a developer's Circom circuit and runs an end-to-end pipeline through proving-key generation, on-chain verifier contract deployment, and a single-function integration into any JavaScript project — abstracting the entire Web3/blockchain surface for app developers building privacy features. *This is structurally the same shape of project as Canton Bindings: a typed SDK that turns a heavy, format-specific artifact (.circom there, .dar here) into a one-line integration for application developers across an ecosystem with a steep learning curve.* The Foundation should treat that grant as the closest available proxy for our ability to deliver on this scope.
+
+**Avalanche Team1 mini-grant — ZK SDK for Avalanche.** A second shipped SDK targeting Avalanche-specific subnet capabilities. Demonstrates repeated capacity to ship developer infrastructure across heterogeneous L1 architectures — directly relevant to Canton's privacy-preserving, multi-participant model.
+
+### 7.2 Hackathon track record (selected, 15+ wins total)
+
+- **EthIndia 2025 (Bengaluru)** — 1st prize
+- **Polkadot AssetHub Hackathon** — 1st prize
+- **Graph-e-thon** — 1st prize (IoT + AI/ML medical infrastructure)
+- **Avalanche Team1 Hackathon Delhi** — 2nd prize
+- **Hacker House Goa (Nillion AI track)** — 3rd prize
+- **Akindo Oasis Hackathon** — 3rd prize
+- **ETHGlobal New Delhi** — Rootstock Infrastructure track winner
+- **Arbitrum Open House India** — Honourable Mention
+- Plus 7+ additional university and ecosystem hackathon wins
+
+What this signals to the Committee: we ship fast, we ship working code, and we have repeated experience integrating with novel chains under tight deadlines — the exact muscle this proposal requires.
+
+### 7.3 Distribution & community capability
+
+**HackTour India** ([x.com/HackTourIND](https://x.com/HackTourIND)) is a Web3 developer community we co-founded and run. In 2025 alone we co-organized **50+ events** in collaboration with multiple ecosystem projects.
+
+Why this matters for a Development Fund evaluator: CIP-0082 explicitly lists **"Inclusion of GTM and distribution plans"** as an evaluation criterion. Most grant teams treat distribution as an afterthought. We bring a built-in, EVM-flavoured Indian developer community of exactly the kind of builders the Foundation wants Canton to attract — and we will run meetups, hands-on workshops, and Canton track integrations through HackTour India alongside the technical milestones. (Specific GTM commitments live in Milestone 4.)
+
+### 7.4 How we'll close the Daml/Canton gap
+
+We're not pretending the gap doesn't exist. Concrete mitigation:
+
+| Mitigation | Detail |
+|---|---|
+| Champion-led onboarding | Engage Jatin Pandya (Canton Foundation DevRel) for an initial scoping session and ongoing technical sync — exactly the access path the Foundation set up for external contributors |
+| 2-week dedicated ramp-up at the front of M1 | First fortnight of Milestone 1 is explicitly scoped as cn-quickstart + Daml SDK + Splice LocalNet ramp. No code shipped to main during this window. M1's 6-week budget already absorbs this |
+| Prior-art absorption | Read Cantool source, `daml codegen js` source, and the existing Splice Scan API before architecting the IR layer — we will not re-discover lessons others have already learned |
+| Friendly engagement with adjacent maintainers | DM Eric Mann (Cantool) and the `daml codegen js` maintainers at DA before publishing the design — turn potential overlap into explicit collaboration |
+| Precedent | Eric Mann's own April 27 blog post: *"I'll talk about my journey from cross-chain DeFi infrastructure to Canton, and why I chose to build here after years in the broader space."* The Foundation has already accepted that experienced cross-chain builders bring real value when they cross over |
+| Honest milestone scoping | M1 deliberately ships TypeScript first (where we have deepest expertise) before adding 4 more languages in M2 and M3. If the ramp goes badly, the Committee can see it in M1 and intervene before larger sums commit |
+
+### 7.5 Why this team is the right risk for the Foundation to take
+
+1. **We've already won the trust of two foundation grant programs** (Arbitrum, Avalanche) and shipped what we promised. Canton would be the third — a defensible pattern, not a first attempt
+2. **The Arbitrum SDK is the structural twin of this proposal.** Same language (TypeScript core), same shape (abstract a heavy crypto-native artifact into a one-call integration), same target user (app developers, not protocol engineers)
+3. **We bring distribution.** HackTour India is a real, measurable channel into the Indian Web3 developer base — exactly where Canton's next 1,000 builders are most likely to come from
+4. **We are the customer.** Every other team proposing Canton dev tools is a Canton native building for other Canton natives. We are the EVM-native cohort the Foundation wants to attract, building the SDK *we* would have wanted in week 1
 
 ## 8. License and ownership
 
